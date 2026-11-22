@@ -2,7 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::view('/admin/akhiri-sewa', 'admin.akhiri-sewa')->name('admin.akhiri-sewa');
+Route::view('/admin/booking/akun-disetujui', 'admin.booking.akun-disetujui')->name('admin.booking.akun-disetujui');
+Route::view('/admin/booking/akun-ditolak', 'admin.booking.akun-ditolak')->name('admin.booking.akun-ditolak');
+Route::view('/admin/booking/detail-booking-disetujui', 'admin.booking.detail-booking-disetujui')->name('admin.booking.detail-booking-disetujui');
+Route::view('/admin/booking/detail-booking-selesai', 'admin.booking.detail-booking-selesai')->name('admin.booking.detail-booking-selesai');
+Route::view('/admin/booking/detail-booking-terlambat', 'admin.booking.detail-booking-terlambat')->name('admin.booking.detail-booking-terlambat');
+Route::view('/admin/booking/detail-verifikasi-booking', 'admin.booking.detail-verifikasi-booking')->name('admin.booking.detail-verifikasi-booking');
+Route::view('/admin/booking/menunggu-verifikasi', 'admin.booking.menunggu-verifikasi')->name('admin.booking.menunggu-verifikasi');
+Route::view('/admin/booking/verifikasi-akun', 'admin.booking.verifikasi-akun')->name('admin.booking.verifikasi-akun');
+Route::view('/admin/booking/verifikasi-booking', 'admin.booking.verifikasi-booking')->name('admin.booking.verifikasi-booking');
 Route::view('/admin/dashboard-admin', 'admin.dashboard-admin')->name('admin.dashboard-admin');
+Route::view('/admin/header-sidebar-footer', 'admin.header-sidebar-footer')->name('admin.header-sidebar-footer');
+Route::view('/admin/kelola-menu', 'admin.kelola-menu')->name('admin.kelola-menu');
+Route::view('/admin/kelola-unit', 'admin.kelola-unit')->name('admin.kelola-unit');
+Route::view('/admin/pesanan-baru', 'admin.pesanan-baru')->name('admin.pesanan-baru');
+Route::view('/admin/pesanan-diproses', 'admin.pesanan-diproses')->name('admin.pesanan-diproses');
+Route::view('/admin/pesanan-fnb', 'admin.pesanan-fnb')->name('admin.pesanan-fnb');
+Route::view('/admin/pesanan-selesai', 'admin.pesanan-selesai')->name('admin.pesanan-selesai');
+Route::view('/admin/sewa-digunakan', 'admin.sewa-digunakan')->name('admin.sewa-digunakan');
+Route::view('/admin/sewa-ps', 'admin.sewa-ps')->name('admin.sewa-ps');
+Route::view('/admin/sewa-tersedia', 'admin.sewa-tersedia')->name('admin.sewa-tersedia');
+Route::view('/admin/tambah-durasi', 'admin.tambah-durasi')->name('admin.tambah-durasi');
 Route::view('/auth/login', 'auth.login')->name('auth.login');
 Route::view('/auth/register', 'auth.register')->name('auth.register');
 Route::view('/', 'index')->name('index');

@@ -51,8 +51,8 @@
 
                         <a
                             href="{{ route('admin.dashboard-admin') }}"
-                            class="admin-nav-link active"
-                            aria-current="page"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.dashboard-admin')])
+                            @if (request()->routeIs('admin.dashboard-admin')) aria-current="location" @endif
                         >
 
                             <img
@@ -96,8 +96,9 @@
                     <li>
 
                         <a
-                            href="#"
-                            class="admin-nav-link"
+                            href="{{ route('admin.sewa-ps') }}"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.sewa-*', 'admin.tambah-durasi', 'admin.akhiri-sewa')])
+                            @if (request()->routeIs('admin.sewa-*', 'admin.tambah-durasi', 'admin.akhiri-sewa')) aria-current="location" @endif
                         >
 
                             <img
@@ -122,8 +123,9 @@
                     <li>
 
                         <a
-                            href="{{ route('user.booking.booking-form') }}"
-                            class="admin-nav-link"
+                            href="{{ route('admin.booking.verifikasi-akun') }}"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.booking.*')])
+                            @if (request()->routeIs('admin.booking.*')) aria-current="location" @endif
                         >
 
                             <img
@@ -148,8 +150,9 @@
                     <li>
 
                         <a
-                            href="#"
-                            class="admin-nav-link"
+                            href="{{ route('admin.kelola-unit') }}"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.kelola-unit')])
+                            @if (request()->routeIs('admin.kelola-unit')) aria-current="location" @endif
                         >
 
                             <img
@@ -193,8 +196,9 @@
                     <li>
 
                         <a
-                            href="#"
-                            class="admin-nav-link"
+                            href="{{ route('admin.pesanan-fnb') }}"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.pesanan-*')])
+                            @if (request()->routeIs('admin.pesanan-*')) aria-current="location" @endif
                         >
 
                             <img
@@ -219,8 +223,9 @@
                     <li>
 
                         <a
-                            href="#"
-                            class="admin-nav-link"
+                            href="{{ route('admin.kelola-menu') }}"
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.kelola-menu')])
+                            @if (request()->routeIs('admin.kelola-menu')) aria-current="location" @endif
                         >
 
                             <img

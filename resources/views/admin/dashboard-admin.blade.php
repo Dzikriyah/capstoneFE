@@ -1,33 +1,12 @@
-@extends('layouts.prototype')
+@extends('layouts.admin')
 
-@section('head')
+@section('admin-head')
 <meta
     name="description"
     content="Admin Dashboard IB Gaming"
 >
 
 <title>Admin Dashboard - IB Gaming</title>
-
-
-<!-- =====================================================
-     GLOBAL CSS
-====================================================== -->
-
-<link
-    rel="stylesheet"
-    href="{{ asset('css/global.css') }}"
->
-
-
-<!-- =====================================================
-     ADMIN LAYOUT CSS
-     Sidebar, Header, Footer
-====================================================== -->
-
-<link
-    rel="stylesheet"
-    href="{{ asset('css/admin/admin-layout.css') }}"
->
 
 
 <!-- =====================================================
@@ -41,60 +20,21 @@
 >
 @endsection
 
-@section('content')
-<div class="admin-layout">
+@section('admin-layout-class', 'admin-dashboard')
+
+@section('admin-content')
+<main class="admin-content">
+
+    <!-- =========================================
+        SUMMARY CARDS
+    ========================================== -->
+   <x-admin.dashboard-admin.dashboard-summary />
 
 
-    <!-- =====================================================
-         SIDEBAR
-    ====================================================== -->
+    <!-- =========================================
+        DASHBOARD GRID
+    ========================================== -->
+    <x-admin.dashboard-admin.dashboard-grid />
 
-    <x-admin.dashboard-admin.aside />
-
-
-
-                <!-- =====================================================
-                    MAIN AREA
-                ====================================================== -->
-
-                <div class="admin-main">
-
-
-
-                    <!-- =================================================
-                        HEADER
-                    ================================================== -->
-
-                <x-admin.dashboard-admin.header />
-
-
-
-                <main class="admin-content">
-
-                <!-- =========================================
-                    SUMMARY CARDS
-                ========================================== -->
-               <x-admin.dashboard-admin.dashboard-summary />
-
-
-                <!-- =========================================
-                    DASHBOARD GRID
-                ========================================== -->
-                <x-admin.dashboard-admin.dashboard-grid />
-
-            </main>
-
-
-
-        <!-- =====================================================
-             FOOTER
-             TETAP MENGGUNAKAN ICON YANG SUDAH ADA
-        ====================================================== -->
-
-        <x-admin.dashboard-admin.footer />
-
-
-    </div>
-
-</div>
+</main>
 @endsection

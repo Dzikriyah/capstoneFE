@@ -64,8 +64,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -84,9 +91,16 @@
                                     Digunakan
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>01:23:45</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>01:46:35</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -105,9 +119,16 @@
                                     Tersedia
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -126,10 +147,18 @@
                                     Digunakan
                                 </div>
 
-                                <div class="unit-footer">
+                                 <div class="unit-footer">
                                     <span>00:46:35</span>
-                                    <span class="unit-arrow">›</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
+
                             </article>
 
 
@@ -148,8 +177,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>00:05:23</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>01:27:24</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -168,9 +204,16 @@
                                     Tersedia
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -189,9 +232,16 @@
                                     Maintenance
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -210,9 +260,16 @@
                                     Tersedia
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -231,9 +288,16 @@
                                     Tersedia
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -252,9 +316,16 @@
                                     Digunakan
                                 </div>
 
-                                <div class="unit-footer">
-                                    <span>01:12:54</span>
-                                    <span class="unit-arrow">›</span>
+                                 <div class="unit-footer">
+                                    <span>00:22:35</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -273,10 +344,19 @@
                                     Digunakan
                                 </div>
 
+
                                 <div class="unit-footer">
                                     <span>01:27:24</span>
-                                    <span class="unit-arrow">›</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
+
                             </article>
 
 
@@ -295,8 +375,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -316,8 +403,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -337,8 +431,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -358,8 +459,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>•</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>-</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -379,8 +487,15 @@
                                 </div>
 
                                 <div class="unit-footer">
-                                    <span>02:12:41</span>
-                                    <span class="unit-arrow">›</span>
+                                    <span>02:32:12</span>
+
+                                    <span class="unit-arrow">
+                                        <img
+                                            src="{{ asset('assets/Icon/Arrow.svg') }}"
+                                            alt=""
+                                            aria-hidden="true"
+                                        >
+                                    </span>
                                 </div>
                             </article>
 
@@ -398,19 +513,24 @@
                         <!-- =================================
                             AKTIVITAS TERBARU
                         ================================== -->
-                        <article class="dashboard-panel activity-panel">
+                       <article class="dashboard-panel activity-panel">
 
-                            <div class="panel-header">
-                                <div class="panel-title-wrapper">
+                                <div class="panel-header">
+                                    <div class="panel-title-wrapper">
 
-                                    <span class="panel-title-symbol">◷</span>
+                                        <img
+                                            src="{{ asset('assets/Icon/Timer.svg') }}"
+                                            alt=""
+                                            class="panel-title-icon"
+                                            aria-hidden="true"
+                                        >
 
-                                    <h2>
-                                        Aktivitas Terbaru
-                                    </h2>
+                                        <h2>
+                                            Aktivitas Terbaru
+                                        </h2>
 
+                                    </div>
                                 </div>
-                            </div>
 
 
                             <div class="activity-list">
@@ -533,9 +653,14 @@
                         <article class="dashboard-panel quick-actions-panel">
 
                             <div class="panel-header">
-                                <div class="panel-title-wrapper">
+                              <div class="panel-title-wrapper">
 
-                                    <span class="panel-title-symbol">✦</span>
+                                    <img
+                                        src="{{ asset('assets/Icon/Quick.svg') }}"
+                                        alt=""
+                                        class="panel-title-icon"
+                                        aria-hidden="true"
+                                    >
 
                                     <h2>
                                         Quick Actions
@@ -548,7 +673,7 @@
                             <div class="quick-actions-grid">
 
                                 <a
-                                    href="#"
+                                    href="{{ route('admin.sewa-ps') }}"
                                     class="quick-action"
                                 >
                                     <img
@@ -566,7 +691,7 @@
 
 
                                 <a
-                                    href="#"
+                                    href="{{ route('admin.pesanan-fnb') }}"
                                     class="quick-action"
                                 >
                                     <img
@@ -584,7 +709,7 @@
 
 
                                 <a
-                                    href="{{ route('user.booking.booking-form') }}"
+                                    href="{{ route('admin.booking.verifikasi-akun') }}"
                                     class="quick-action"
                                 >
                                     <img
@@ -602,7 +727,7 @@
 
 
                                 <a
-                                    href="#"
+                                    href="{{ route('admin.kelola-menu') }}"
                                     class="quick-action"
                                 >
                                     <img

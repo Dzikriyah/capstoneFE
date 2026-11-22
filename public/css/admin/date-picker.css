@@ -1,0 +1,30 @@
+.sewa-date-input {
+    font: inherit;
+    color: inherit;
+}
+
+.sewa-date:not(.sewa-date--picker) time {
+    display: none;
+}
+
+.sewa-date--picker {
+    position: relative;
+}
+
+.sewa-date--picker .sewa-date-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sewa-date--picker:hover {
+    border-color: #B58A4A;
+}
+
+.sewa-date--picker:focus-within {
+    outline: 2px solid #B58A4A;
+    outline-offset: 2px;
+}
