@@ -43,41 +43,12 @@
              FILTER TAB
         ================================================== -->
 
-        <nav
-            class="pesanan-fnb-tabs"
-            aria-label="Filter pesanan"
-        >
-
-            <a
-                href="#"
-                class="pesanan-fnb-tab active"
-                aria-current="page"
-            >
-                Semua Pesanan
-            </a>
-
-            <a
-                href="#"
-                class="pesanan-fnb-tab"
-            >
-                Baru
-            </a>
-
-            <a
-                href="#"
-                class="pesanan-fnb-tab"
-            >
-                Diproses
-            </a>
-
-            <a
-                href="#"
-                class="pesanan-fnb-tab"
-            >
-                Selesai
-            </a>
-
-        </nav>
+        <div class="pesanan-fnb-tabs" role="group" aria-label="Filter status pesanan">
+            <button type="button" class="pesanan-fnb-tab active" data-order-filter="semua" aria-pressed="true">Semua Pesanan</button>
+            <button type="button" class="pesanan-fnb-tab" data-order-filter="baru" aria-pressed="false">Baru</button>
+            <button type="button" class="pesanan-fnb-tab" data-order-filter="diproses" aria-pressed="false">Diproses</button>
+            <button type="button" class="pesanan-fnb-tab" data-order-filter="selesai" aria-pressed="false">Selesai</button>
+        </div>
 
 
         <!-- =================================================
@@ -139,7 +110,7 @@
 
                     <!-- FNB 17 -->
 
-                    <tr>
+                    <tr data-order-status="baru">
 
                         <td>FNB-17</td>
 
@@ -173,7 +144,7 @@
 
                     <!-- FNB 16 -->
 
-                    <tr>
+                    <tr data-order-status="baru">
 
                         <td>FNB-16</td>
 
@@ -207,7 +178,7 @@
 
                     <!-- FNB 15 -->
 
-                    <tr>
+                    <tr data-order-status="diproses">
 
                         <td>FNB-15</td>
 
@@ -241,7 +212,7 @@
 
                     <!-- FNB 14 -->
 
-                    <tr>
+                    <tr data-order-status="diproses">
 
                         <td>FNB-14</td>
 
@@ -275,7 +246,7 @@
 
                     <!-- FNB 13 -->
 
-                    <tr>
+                    <tr data-order-status="selesai">
 
                         <td>FNB-13</td>
 
@@ -309,7 +280,7 @@
 
                     <!-- FNB 12 -->
 
-                    <tr>
+                    <tr data-order-status="selesai">
 
                         <td>FNB-12</td>
 
@@ -343,7 +314,7 @@
 
                     <!-- FNB 11 -->
 
-                    <tr>
+                    <tr data-order-status="selesai">
 
                         <td>FNB-11</td>
 
@@ -374,6 +345,9 @@
 
                     </tr>
 
+                    <tr data-order-empty hidden>
+                        <td colspan="8">Tidak ada pesanan dengan status ini.</td>
+                    </tr>
                 </tbody>
 
             </table>

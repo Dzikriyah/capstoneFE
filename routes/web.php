@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/admin/akhiri-sewa', 'admin.akhiri-sewa')->name('admin.akhiri-sewa');
+Route::redirect('/admin/akhiri-sewa', '/admin/sewa-digunakan?akhiri-sewa=1');
 Route::view('/admin/booking/akun-disetujui', 'admin.booking.akun-disetujui')->name('admin.booking.akun-disetujui');
 Route::view('/admin/booking/akun-ditolak', 'admin.booking.akun-ditolak')->name('admin.booking.akun-ditolak');
 Route::view('/admin/booking/detail-booking-disetujui', 'admin.booking.detail-booking-disetujui')->name('admin.booking.detail-booking-disetujui');
@@ -21,9 +21,9 @@ Route::view('/admin/pesanan-diproses', 'admin.pesanan-diproses')->name('admin.pe
 Route::view('/admin/pesanan-fnb', 'admin.pesanan-fnb')->name('admin.pesanan-fnb');
 Route::view('/admin/pesanan-selesai', 'admin.pesanan-selesai')->name('admin.pesanan-selesai');
 Route::view('/admin/sewa-digunakan', 'admin.sewa-digunakan')->name('admin.sewa-digunakan');
+Route::redirect('/admin/tambah-durasi', '/admin/sewa-digunakan?tambah-durasi=1');
 Route::view('/admin/sewa-ps', 'admin.sewa-ps')->name('admin.sewa-ps');
 Route::view('/admin/sewa-tersedia', 'admin.sewa-tersedia')->name('admin.sewa-tersedia');
-Route::view('/admin/tambah-durasi', 'admin.tambah-durasi')->name('admin.tambah-durasi');
 Route::view('/auth/login', 'auth.login')->name('auth.login');
 Route::view('/auth/register', 'auth.register')->name('auth.register');
 Route::view('/', 'index')->name('index');

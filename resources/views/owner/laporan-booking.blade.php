@@ -1,6 +1,6 @@
 @extends('layouts.prototype')
 
-@section('body-attributes', 'class="dashboard-body"')
+@section('body-attributes')class="dashboard-body"@endsection
 @section('head')
 <title>Dashboard Owner - Laporan Booking | IB Gaming</title>
 
@@ -22,7 +22,7 @@
     <!-- ==============================================
          SIDEBAR NAVIGASI
     =============================================== -->
-    <x-owner.laporan-booking.aside />
+    <x-owner.shared.sidebar />
 
     <!-- ==============================================
          MAIN WRAPPER (AREA KANAN)
@@ -33,7 +33,7 @@
         <x-owner.shared.header />
 
         <!-- Konten Halaman -->
-        <main class="page-content">
+        <main class="page-content owner-booking-report">
 
             <!-- Heading Judul Halaman -->
             <x-owner.laporan-booking.banner-heading />

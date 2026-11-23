@@ -97,8 +97,8 @@
 
                         <a
                             href="{{ route('admin.sewa-ps') }}"
-                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.sewa-*', 'admin.tambah-durasi', 'admin.akhiri-sewa')])
-                            @if (request()->routeIs('admin.sewa-*', 'admin.tambah-durasi', 'admin.akhiri-sewa')) aria-current="location" @endif
+                            @class(['admin-nav-link', 'active' => request()->routeIs('admin.sewa-*')])
+                            @if (request()->routeIs('admin.sewa-*')) aria-current="location" @endif
                         >
 
                             <img

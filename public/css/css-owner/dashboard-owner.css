@@ -1,0 +1,84 @@
+.owner-dashboard-heading {
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    background: linear-gradient(120deg, #fffdf8, var(--gold-box));
+}
+
+.owner-dashboard-heading h1 {
+    margin-bottom: 0.5rem;
+    font: 700 clamp(1.9rem, 4vw, 2.75rem) / 1.15 var(--font-heading);
+}
+
+.owner-dashboard-heading p,
+.owner-report-card p {
+    color: #6e6256;
+    font-size: 0.88rem;
+}
+
+.owner-reports h2 {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.owner-report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 1rem;
+    list-style: none;
+}
+
+.owner-report-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    background: var(--bg-white);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.owner-report-card:hover,
+.owner-report-card:focus-visible {
+    border-color: var(--gold-main);
+    box-shadow: 0 6px 18px rgba(98, 71, 37, 0.09);
+}
+
+.owner-report-card:focus-visible {
+    outline: 2px solid var(--gold-hover);
+    outline-offset: 3px;
+}
+
+.owner-report-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+    background: var(--gold-box);
+}
+
+.owner-report-icon img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+.owner-report-card h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+}
+
+.owner-report-action {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #795025;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+

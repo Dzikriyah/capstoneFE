@@ -22,7 +22,7 @@
     <!-- ==============================================
          SIDEBAR NAVIGASI
     =============================================== -->
-    <x-owner.laporan-fnb.aside />
+    <x-owner.shared.sidebar />
 
     <!-- ==============================================
          AREA KONTEN KANAN (MAIN WRAPPER)

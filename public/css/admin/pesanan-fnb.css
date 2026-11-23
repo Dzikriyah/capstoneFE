@@ -108,8 +108,9 @@
 
     display: flex;
     align-items: flex-end;
-
-    gap: 40px;
+    flex-wrap: wrap;
+    column-gap: clamp(12px, 3vw, 40px);
+    row-gap: 4px;
 
     margin-bottom: 16px;
 
@@ -126,6 +127,9 @@
     height: 38px;
 
     padding: 0 2px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 
     color: #29231F;
 
@@ -606,4 +610,13 @@
 /* PANAH KE KANAN */
 .pagination-arrow-right {
     transform: rotate(-90deg);
+}
+
+.pesanan-fnb-table tr[hidden] {
+    display: none;
+}
+
+.pesanan-fnb-tab:focus-visible {
+    outline: 2px solid #b58a4a;
+    outline-offset: 3px;
 }

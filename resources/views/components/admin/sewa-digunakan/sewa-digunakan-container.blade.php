@@ -194,7 +194,7 @@
 
                     <div class="sewa-used-detail-row">
                         <span>Estimasi Selesai</span>
-                        <span>16.00</span>
+                        <span id="sewaEstimasiSelesai">16.00</span>
                     </div>
 
                 </div>
@@ -219,7 +219,7 @@
 
                     <div class="sewa-used-detail-row">
                         <span>Total</span>
-                        <span>Rp 16.000</span>
+                        <span id="sewaTotalPembayaran">Rp 16.000</span>
                     </div>
 
                     <div class="sewa-used-detail-row">
@@ -244,13 +244,9 @@
         ========================== -->
         <div class="sewa-digunakan-actions">
 
-            <a href="{{ route('admin.tambah-durasi') }}" class="sewa-add-duration-button">
-    Tambah Durasi
-</a>
+            <button type="button" class="sewa-add-duration-button" id="openTambahDurasi" aria-haspopup="dialog" aria-controls="tambahDurasiDialog">Tambah Durasi</button>
 
-           <a href="{{ route('admin.akhiri-sewa') }}" class="sewa-end-session-button">
-    Akhiri Sesi Sewa
-</a>
+           <button type="button" class="sewa-end-session-button" id="openAkhiriSewa" aria-haspopup="dialog" aria-controls="akhiriSewaDialog">Akhiri Sesi Sewa</button>
 
         </div>
 

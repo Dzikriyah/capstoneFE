@@ -1,4 +1,8 @@
 (() => {
+    const dialog = document.getElementById('tambahDurasiDialog');
+    const trigger = document.getElementById('openTambahDurasi');
+    const sessionEnd = document.getElementById('sewaEstimasiSelesai');
+    const sessionTotal = document.getElementById('sewaTotalPembayaran');
     const hours = document.getElementById('durasi-jam');
     const minutes = document.getElementById('durasi-menit');
     const save = document.getElementById('simpanDurasi');
@@ -11,7 +15,8 @@
     const money = new Intl.NumberFormat('id-ID');
     const hourlyRate = 8000;
     const startMinutes = 14 * 60;
-    let savedDuration = 120;
+    const initialDuration = 120;
+    let savedDuration = initialDuration;
 
     const normalize = (input, value) => Math.max(0, Math.min(Number(input.max), Math.floor(value) || 0));
     const extraMinutes = () => normalize(hours, hours.valueAsNumber) * 60 + normalize(minutes, minutes.valueAsNumber);
@@ -59,6 +64,34 @@
         });
     }
 
+    trigger.addEventListener('click', () => dialog.showModal());
+
+    dialog.querySelectorAll('[data-close-duration]').forEach((button) => {
+        button.addEventListener('click', () => dialog.close());
+    });
+
+    dialog.addEventListener('close', () => {
+        hours.value = 0;
+        minutes.value = 0;
+        updateSummary();
+    });
+
+    dialog.addEventListener('click', (event) => {
+        if (event.target !== dialog) return;
+
+        const {left, right, top, bottom} = dialog.getBoundingClientRect();
+        if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+            dialog.close();
+        }
+    });
+
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('tambah-durasi')) {
+        url.searchParams.delete('tambah-durasi');
+        window.history.replaceState(null, '', url);
+        dialog.showModal();
+    }
+
     save.addEventListener('click', () => {
         const extra = extraMinutes();
         if (!extra) return;
@@ -68,6 +101,17 @@
         minutes.value = 0;
         currentEnd.textContent = formatEnd(savedDuration);
         updateSummary();
+        sessionEnd.textContent = formatEnd(savedDuration).replace(':', '.');
+        sessionTotal.textContent = payment.textContent;
+        document.dispatchEvent(new CustomEvent('rental-duration-saved', {
+            detail: {
+                end: formatEnd(savedDuration),
+                duration: formatDuration(savedDuration),
+                extra: formatMoney(Math.round((savedDuration - initialDuration) * hourlyRate / 60)),
+                total: payment.textContent
+            }
+        }));
+        dialog.close();
         feedback.textContent = 'Durasi berhasil ditambah ' + formatDuration(extra) + '. Estimasi selesai ' + formatEnd(savedDuration) + '.';
     });
 

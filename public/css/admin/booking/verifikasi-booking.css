@@ -209,13 +209,13 @@
 
     gap: 12px;
 
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
 
 .booking-verification-tab {
-    min-width: 175px;
-    height: 42px;
+    min-width: 145px;
+    min-height: 38px;
 
     display: inline-flex;
     align-items: center;
@@ -223,7 +223,7 @@
 
     gap: 9px;
 
-    padding: 0 20px;
+    padding: 7px 14px;
 
     color: #000000;
     background: transparent;
@@ -231,8 +231,8 @@
     border: 1px solid #000000;
     border-radius: 8px;
 
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-family: var(--font-body);
+    font-size: 13px;
     font-weight: 400;
 
     text-decoration: none;
@@ -277,11 +277,11 @@
 /* VERIFIKASI AKUN - INACTIVE */
 
 .booking-verification-tab:not(.active) {
-    color: #000000;
+    color: #514638;
 
-    background: transparent;
+    background: #FFFEFA;
 
-    border-color: #000000;
+    border-color: #D9CBB9;
 }
 
 
@@ -338,7 +338,7 @@
     }
 }
 
-@container booking-verification (min-width: 1120px) {
+@container booking-verification (min-width: 920px) {
     .booking-summary-grid {
         grid-template-columns: repeat(6, minmax(0, 1fr));
     }
@@ -351,14 +351,14 @@
 
 .booking-summary-card {
     min-width: 0;
-    min-height: 104px;
+    min-height: 86px;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
-    padding: 14px 12px;
+    padding: 11px 10px;
 
     background: #FFFEFA;
 
@@ -374,8 +374,8 @@
    ========================================================= */
 
 .booking-summary-icon {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
 
     flex-shrink: 0;
 
@@ -383,15 +383,14 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: 1px;
 
     border-radius: 8px;
 }
 
 
 .booking-summary-icon img {
-    width: 19px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
 
     display: block;
 
@@ -549,8 +548,8 @@
     color: #000000;
 
     font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
 
     line-height: 1.2;
 
@@ -568,8 +567,8 @@
     color: #000000;
 
     font-family: var(--font-body);
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 700;
 
     line-height: 1;
 }
@@ -582,7 +581,7 @@
 .booking-summary-description {
     margin: 3px 0 0;
 
-    color: #000000;
+    color: #6F6356;
 
     font-family: var(--font-body);
     font-size: 10px;
@@ -638,9 +637,9 @@
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 6px;
 
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     min-width: 0;
 }
@@ -783,7 +782,7 @@
 .booking-account-table-wrapper {
     width: 100%;
 
-    overflow: hidden;
+    overflow-x: auto;
 
     border-radius: 20px 20px 0 0;
 
@@ -797,6 +796,7 @@
 
 .booking-account-table {
     width: 100%;
+    min-width: 660px;
 
     border-collapse: separate;
     border-spacing: 0;
@@ -1062,4 +1062,14 @@
     border-color: #B99053;
 
     color: #FFFFFF;
+}
+.booking-verification-content .booking-search-wrapper {
+    flex: 1 1 180px;
+    min-width: 0;
+    max-width: 280px;
+}
+
+.booking-verification-content .booking-account-search {
+    width: 100%;
+    min-width: 0;
 }

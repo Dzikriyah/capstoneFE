@@ -1,108 +1,4 @@
-@extends('layouts.admin')
-
-@section('admin-head')
-<script src="{{ asset('js/admin/akhiri-sewa.js') }}" defer></script>
-<title>IB Gaming - Admin</title>
-
-<link rel="stylesheet" href="{{ asset('css/admin/sewa-digunakan.css') }}">
-
-
-<link rel="stylesheet" href="{{ asset('css/admin/akhiri-sewa.css') }}">
-@endsection
-
-@section('admin-content')
-<!-- =================================================
-                 CONTENT
-
-                 KONTEN HALAMAN DITARUH DI SINI
-            ================================================== -->
-            <main class="sewa-digunakan-main">
-
-    <!-- =========================
-         PAGE HEADING
-    ========================== -->
-    <div class="sewa-digunakan-heading">
-
-        <div class="sewa-digunakan-heading-left">
-
-            <img
-                src="{{ asset('assets/Icon/Game.svg') }}"
-                alt=""
-                class="sewa-digunakan-heading-icon"
-            >
-
-            <div class="sewa-digunakan-heading-text">
-                <h1>Detail Sewa PlayStation Aktif</h1>
-                <p>Informasi Penyewaan Playstation yang sedang berlangsung</p>
-            </div>
-
-        </div>
-
-
-        <!-- BUTTON KEMBALI -->
-        <a href="{{ route('admin.sewa-ps') }}" class="sewa-digunakan-back-button">
-
-            <img
-                src="{{ asset('assets/Icon/Panah.svg') }}"
-                alt=""
-                class="sewa-digunakan-back-icon"
-            >
-
-            <span>Kembali</span>
-
-        </a>
-
-    </div>
-
-
-    <!-- =========================
-         BREADCRUMB
-    ========================== -->
-    <div class="sewa-digunakan-breadcrumb">
-
-        <a href="{{ route('admin.sewa-ps') }}" class="sewa-digunakan-breadcrumb-back">
-
-            <img
-                src="{{ asset('assets/Icon/Panah.svg') }}"
-                alt=""
-                class="sewa-digunakan-breadcrumb-back-icon"
-            >
-
-        </a>
-
-        <a href="{{ route('admin.sewa-ps') }}" class="sewa-digunakan-breadcrumb-text">
-            Booking PS
-        </a>
-
-        <img
-            src="{{ asset('assets/Icon/Arrow.svg') }}"
-            alt=""
-            class="sewa-digunakan-breadcrumb-arrow"
-        >
-
-        <span class="sewa-digunakan-breadcrumb-current">
-            Detail Booking Digunakan
-        </span>
-
-    </div>
-
-
-    <!-- =========================
-         MAIN CONTAINER
-    ========================== -->
-    <x-admin.akhiri-sewa.sewa-digunakan-container />
-
-</main>
-@endsection
-
-@section('admin-overlays')
-<!-- =========================================================
-     POPUP AKHIRI SEWA
-========================================================= -->
-
-<div class="akhiri-sewa-overlay">
-
-    <div class="akhiri-sewa-popup">
+<dialog class="akhiri-sewa-popup" id="akhiriSewaDialog" aria-labelledby="akhiriSewaTitle">
 
         <!-- =====================================================
              HEADER POPUP
@@ -120,7 +16,7 @@
 
                 <div class="akhiri-sewa-header-text">
 
-                    <h2>Sewa Berhasil Diselesaikan</h2>
+                    <h2 id="akhiriSewaTitle">Sewa Berhasil Diselesaikan</h2>
 
                     <p>
                         Sewa berhasil diselesaikan
@@ -135,7 +31,7 @@
             <button
                 type="button"
                 class="akhiri-sewa-close"
-                aria-label="Tutup"
+                aria-label="Tutup" autofocus
             >
                 <img
                     src="{{ asset('assets/Icon/Close.svg') }}"
@@ -258,7 +154,7 @@
 
                         <div class="akhiri-sewa-rental-row">
                             <span>Total Durasi</span>
-                            <strong>2 Jam</strong>
+                            <strong data-receipt-duration>2 Jam</strong>
                         </div>
 
                         <div class="akhiri-sewa-rental-row">
@@ -321,12 +217,12 @@
 
                         <div>
                             <span>Waktu Selesai</span>
-                            <strong>16:00</strong>
+                            <strong data-receipt-end>16:00</strong>
                         </div>
 
                         <div>
                             <span>Durasi</span>
-                            <strong>2 Jam</strong>
+                            <strong data-receipt-duration>2 Jam</strong>
                         </div>
 
                     </div>
@@ -344,7 +240,7 @@
 
                         <div>
                             <span>Tambahan Durasi</span>
-                            <strong>Rp 0</strong>
+                            <strong data-receipt-extra>Rp 0</strong>
                         </div>
 
                     </div>
@@ -355,7 +251,7 @@
 
                         <span>Total Pembayaran</span>
 
-                        <strong>
+                        <strong data-receipt-total>
                             Rp 16.000
                         </strong>
 
@@ -396,6 +292,7 @@
             <button
                 type="button"
                 class="akhiri-sewa-secondary-button"
+                data-print-receipt
             >
                 Cetak Struk
             </button>
@@ -403,6 +300,7 @@
             <button
                 type="button"
                 class="akhiri-sewa-secondary-button"
+                data-download-receipt
             >
                 Unduh PDF
             </button>
@@ -415,8 +313,4 @@
             </a>
 
         </div>
-
-    </div>
-
-</div>
-@endsection
+</dialog>

@@ -1,53 +1,51 @@
-/* =========================================================
-   POPUP AKHIRI SEWA
-   Ukuran popup: 600 x 600
-========================================================= */
-
-
-/* =========================================================
-   OVERLAY
-========================================================= */
-
-.akhiri-sewa-overlay {
+.akhiri-sewa-popup {
     position: fixed;
     inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(0, 0, 0, 0.48);
-
-    z-index: 99999;
-}
-
-
-/* =========================================================
-   POPUP UTAMA
-========================================================= */
-
-.akhiri-sewa-popup {
-    width: 600px;
-    height: 600px;
-
-    display: flex;
-    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    width: min(600px, calc(100% - 24px));
+    max-height: calc(100dvh - 24px);
 
     background: #FFFEFC;
 
     border: 1px solid #B99053;
     border-radius: 20px;
 
-    overflow: hidden;
+    overflow: auto;
+    overscroll-behavior: contain;
 
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
 
     font-family: var(--font-body);
 }
 
+
+.akhiri-sewa-popup[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.akhiri-sewa-popup::backdrop {
+    background: rgba(0, 0, 0, 0.48);
+}
+
+html:has(#akhiriSewaDialog[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+.akhiri-sewa-popup .akhiri-sewa-content {
+    flex: 0 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+}
+
+@media (max-width: 510px) {
+    .akhiri-sewa-popup .akhiri-sewa-content,
+    .akhiri-sewa-popup .akhiri-sewa-actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
 
 /* =========================================================
    HEADER
@@ -772,3 +770,43 @@
 
     transform: translateY(-1px);
 }
+@media print {
+    body:has(#akhiriSewaDialog[open]) > :not(#akhiriSewaDialog) {
+        display: none !important;
+    }
+
+    #akhiriSewaDialog[open] {
+        position: static;
+        display: block;
+        width: auto;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        overflow: visible;
+        border: 0;
+        box-shadow: none;
+    }
+
+    #akhiriSewaDialog::backdrop {
+        display: none;
+    }
+
+    #akhiriSewaDialog > :not(.akhiri-sewa-content),
+    #akhiriSewaDialog .akhiri-sewa-content > :not(.akhiri-sewa-receipt) {
+        display: none;
+    }
+
+    #akhiriSewaDialog .akhiri-sewa-content {
+        display: block;
+        max-width: 85mm;
+        padding: 0;
+    }
+
+    #akhiriSewaDialog .akhiri-sewa-receipt,
+    #akhiriSewaDialog .akhiri-sewa-receipt-inner {
+        height: auto;
+        overflow: visible;
+        break-inside: avoid;
+    }
+}
+

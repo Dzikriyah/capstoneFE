@@ -7,7 +7,7 @@
             <div class="booking-summary-icon">
 
                 <img
-                    src="{{ asset('assets/Icon/Home.svg') }}"
+                    src="{{ asset('assets/Icon/Calendar.svg') }}"
                     alt=""
                 >
 
@@ -15,9 +15,8 @@
 
             <div class="booking-summary-content">
 
-                <p class="booking-summary-label booking-active-label">
-                    <span>Sedang di</span>
-                    <span>Booking</span>
+                <p class="booking-summary-label">
+                    Pengajuan Baru
                 </p>
 
                 <p class="booking-summary-number">

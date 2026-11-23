@@ -4,6 +4,10 @@
 <title>IB Gaming - Admin</title>
 
 <link rel="stylesheet" href="{{ asset('css/admin/sewa-digunakan.css') }}">
+<link rel="stylesheet" href="{{ asset('css/admin/tambah-durasi.css') }}">
+<script src="{{ asset('js/admin/tambah-durasi.js') }}" defer></script>
+<link rel="stylesheet" href="{{ asset('css/admin/akhiri-sewa.css') }}">
+<script src="{{ asset('js/admin/akhiri-sewa.js') }}" defer></script>
 @endsection
 
 @section('admin-content')
@@ -89,4 +93,9 @@
     <x-admin.sewa-digunakan.sewa-digunakan-container />
 
 </main>
+@endsection
+
+@section('admin-overlays')
+<x-admin.sewa-digunakan.tambah-durasi-dialog />
+<x-admin.sewa-digunakan.akhiri-sewa-dialog />
 @endsection
