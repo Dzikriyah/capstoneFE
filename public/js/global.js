@@ -92,13 +92,6 @@ function isUserLoggedIn() {
  * ============================================
  */
 
-/**
- * Mendapatkan lokasi halaman saat ini
- */
-function getPagePath() {
-    return window.location.pathname
-        .replace(/\\/g, "/");
-}
 
 
 /**
@@ -220,9 +213,7 @@ function renderLoggedInHeader(container) {
 
         </a>
 
-        <a
-            class="vector-wrapper"
-            href="${getNotificationPath()}"
+        <button type="button" class="vector-wrapper" data-open-user-notification aria-haspopup="dialog" aria-controls="userNotificationDialog"
             aria-label="Notifikasi">
 
             <img
@@ -231,7 +222,7 @@ function renderLoggedInHeader(container) {
                 alt=""
                 aria-hidden="true">
 
-        </a>
+        </button>
 
         <div class="profile-menu">
 
@@ -406,17 +397,6 @@ function getCartPath() {
 }
 
 
-/**
- * ============================================
- * PATH - NOTIFICATION
- * ============================================
- */
-
-function getNotificationPath() {
-    const path = getPagePath();
-    const from = path.startsWith("/user/fnb/") ? "fnb" : path.startsWith("/user/") ? "home" : "index";
-    return "/user/notification?from=" + from;
-}
 
 
 /**

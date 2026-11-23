@@ -112,6 +112,7 @@
                         id="editNamaUnit"
                         autofocus
                         name="namaUnit"
+                        required
                         class="edit-unit-input"
                         value="TV 1"
                     >
@@ -149,11 +150,11 @@
                         Jumlah Stik
                     </label>
                     <input
-                        type="text"
+                        type="number" min="0" step="1" required
                         id="editJumlahStik"
                         name="jumlahStik"
                         class="edit-unit-input"
-                        value="2 Stik"
+                        value="2"
                     >
                 </div>
 

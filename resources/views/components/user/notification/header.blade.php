@@ -1,8 +1,8 @@
 <header class="notification-header">
 
-            <h1 class="notification-title">
+            <h2 id="userNotificationTitle" class="notification-title">
                 Notifikasi
-            </h1>
+            </h2>
 
             <button
                 type="button"
@@ -10,7 +10,7 @@
                 id="notificationClose"
                 aria-label="Tutup notifikasi"
             >
-                ×
+                &times;
             </button>
 
         </header>

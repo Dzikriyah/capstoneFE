@@ -147,6 +147,7 @@
                              FOTO KTP
                         ================================================== -->
 
+                        @php($maxDocumentSizeMb = 10)
                         <div class="document-upload-box">
 
                             <div class="document-upload-heading">
@@ -171,8 +172,6 @@
                                     <p>
                                         Upload Foto KTP yang jelas dan
                                         terbaca.
-                                        <br>
-                                        Format: JPG, PNG (Maks. 5MB)
                                     </p>
 
                                 </div>
@@ -184,8 +183,11 @@
                                 type="file"
                                 id="ktpFile"
                                 name="ktpFile"
-                                accept=".jpg,.jpeg,.png"
-                                hidden
+                                class="document-file-input"
+                                accept="image/jpeg,image/png"
+                                aria-label="Pilih Foto KTP"
+                                data-max-mb="{{ $maxDocumentSizeMb }}"
+                                aria-describedby="ktpFileHint ktpFileName"
                             >
 
 
@@ -193,14 +195,24 @@
                                 for="ktpFile"
                                 class="file-button"
                             >
-                                Pilih File
+                                <img src="{{ asset('assets/Icon/Camera.svg') }}" alt="" aria-hidden="true">
+                                Pilih Foto
                             </label>
 
+
+                            <p class="document-file-hint" id="ktpFileHint">JPG atau PNG &middot; Maksimal {{ $maxDocumentSizeMb }} MB per foto</p>
 
                             <span
                                 class="selected-file"
                                 id="ktpFileName"
+                                role="status"
                             ></span>
+
+                            <img class="document-preview" id="ktpFilePreview" alt="Pratinjau Foto KTP" hidden>
+
+                            <button type="button" class="document-remove-button" id="ktpFileRemove" aria-label="Hapus Foto KTP" hidden>
+                                Hapus Foto
+                            </button>
 
                         </div>
 
@@ -233,8 +245,6 @@
 
                                     <p>
                                         Upload Foto Wajah yang jelas.
-                                        <br>
-                                        Format: JPG, PNG (Maks. 5MB)
                                     </p>
 
                                 </div>
@@ -246,8 +256,11 @@
                                 type="file"
                                 id="faceFile"
                                 name="faceFile"
-                                accept=".jpg,.jpeg,.png"
-                                hidden
+                                class="document-file-input"
+                                accept="image/jpeg,image/png"
+                                aria-label="Pilih Foto Wajah"
+                                data-max-mb="{{ $maxDocumentSizeMb }}"
+                                aria-describedby="faceFileHint faceFileName"
                             >
 
 
@@ -255,14 +268,24 @@
                                 for="faceFile"
                                 class="file-button"
                             >
-                                Pilih File
+                                <img src="{{ asset('assets/Icon/Camera.svg') }}" alt="" aria-hidden="true">
+                                Pilih Foto
                             </label>
 
+
+                            <p class="document-file-hint" id="faceFileHint">JPG atau PNG &middot; Maksimal {{ $maxDocumentSizeMb }} MB per foto</p>
 
                             <span
                                 class="selected-file"
                                 id="faceFileName"
+                                role="status"
                             ></span>
+
+                            <img class="document-preview" id="faceFilePreview" alt="Pratinjau Foto Wajah" hidden>
+
+                            <button type="button" class="document-remove-button" id="faceFileRemove" aria-label="Hapus Foto Wajah" hidden>
+                                Hapus Foto
+                            </button>
 
                         </div>
 

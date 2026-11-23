@@ -1,134 +1,25 @@
-/* ============================================
-   IB GAMING - NOTIFICATION JAVASCRIPT
-============================================ */
+(() => {
+    const dialog = document.getElementById('userNotificationDialog');
 
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener('click', (event) => {
+        if (event.target.closest('[data-open-user-notification]') && !dialog.open) {
+            dialog.showModal();
+        }
+    });
 
-    /* ========================================
-       ELEMENT
-    ======================================== */
+    dialog.querySelectorAll('#notificationClose, #notificationBack').forEach((button) => {
+        button.addEventListener('click', () => dialog.close());
+    });
 
-    const closeButton =
-        document.getElementById("notificationClose");
-
-    const backButton =
-        document.getElementById("notificationBack");
-
-    const overlay =
-        document.getElementById("notificationOverlay");
-
-    const backgroundFrame =
-        document.getElementById("backgroundFrame");
-
-
-    /* ========================================
-       AMBIL PARAMETER URL
-    ======================================== */
-
-    const urlParams =
-        new URLSearchParams(window.location.search);
-
-    const from =
-        urlParams.get("from");
-
-
-    /* ========================================
-       TENTUKAN HALAMAN BACKGROUND
-    ======================================== */
-
-    if (backgroundFrame) {
-
-        if (from === "home") {
-
-            backgroundFrame.src = "/user/home";
-
-        } else {
-
-            backgroundFrame.src = "/";
-
+    dialog.addEventListener('click', (event) => {
+        if (event.target !== dialog) {
+            return;
         }
 
-    }
-
-
-    /* ========================================
-       FUNGSI KEMBALI
-    ======================================== */
-
-    function goBack() {
-
-        if (from === "home") {
-
-            window.location.href =
-                "/user/home";
-
-        } else {
-
-            window.location.href =
-                "/";
-
+        const {left, right, top, bottom} = dialog.getBoundingClientRect();
+        if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+            dialog.close();
         }
+    });
+})();
 
-    }
-
-
-    /* ========================================
-       TOMBOL CLOSE
-    ======================================== */
-
-    if (closeButton) {
-
-        closeButton.addEventListener(
-            "click",
-            goBack
-        );
-
-    }
-
-
-    /* ========================================
-       TOMBOL KEMBALI
-    ======================================== */
-
-    if (backButton) {
-
-        backButton.addEventListener(
-            "click",
-            goBack
-        );
-
-    }
-
-
-    /* ========================================
-       KLIK OVERLAY
-    ======================================== */
-
-    if (overlay) {
-
-        overlay.addEventListener(
-            "click",
-            goBack
-        );
-
-    }
-
-
-    /* ========================================
-       ESCAPE
-    ======================================== */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Escape") {
-
-                goBack();
-
-            }
-
-        }
-    );
-
-});

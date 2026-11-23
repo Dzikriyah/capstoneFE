@@ -99,9 +99,9 @@
          NOTIFIKASI
     ========================================== -->
 
-    <a
+    <button type="button"
         class="vector-wrapper"
-        href="{{ route('user.notification') }}"
+        data-open-user-notification aria-haspopup="dialog" aria-controls="userNotificationDialog"
         aria-label="Notifikasi"
     >
         <img
@@ -110,7 +110,7 @@
             alt=""
             aria-hidden="true"
         >
-    </a>
+    </button>
 
 
     <!-- =========================================

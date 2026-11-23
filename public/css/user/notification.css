@@ -1,111 +1,15 @@
-/* =========================================================
-   IB GAMING - NOTIFICATION
-========================================================= */
-
-
-/* =========================================================
-   PAGE
-========================================================= */
-
-.notification-page {
-    position: relative;
-
-    width: 100%;
-    min-height: 100vh;
-
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-
-    background: #f7f1e8;
-}
-
-
-/* =========================================================
-   BACKGROUND
-========================================================= */
-
-.notification-background {
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100vh;
-
-    z-index: 1;
-
-    overflow: hidden;
-
-    background-color: #f7f1e8;
-}
-
-
-/* =========================================================
-   BACKGROUND PAGE
-========================================================= */
-
-.notification-background {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    overflow: hidden;
-    background: #f7f1e8;
-}
-
-.background-frame {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: none;
-    background: #ffffff;
-}
-
-
-/* =========================================================
-   DARK OVERLAY
-========================================================= */
-
-.notification-overlay {
-
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100vh;
-
-    background: rgba(0, 0, 0, 0.50);
-
-    z-index: 10;
-
-}
-
-
-/* =========================================================
-   NOTIFICATION MODAL
-========================================================= */
-
 .notification-modal {
 
     position: fixed;
 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 20;
+    inset: 0;
+    margin: auto;
+    padding: 0;
+    border: 0;
 
     width: min(500px, calc(100% - 40px));
 
-    max-height: calc(100vh - 60px);
-
-    display: flex;
-    flex-direction: column;
+    max-height: calc(100dvh - 60px);
 
     background: #ffffff;
 
@@ -118,6 +22,24 @@
 
 }
 
+
+.notification-modal[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-modal::backdrop {
+    background: rgba(0, 0, 0, 0.50);
+}
+
+html:has(#userNotificationDialog[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+button[data-open-user-notification] {
+    cursor: pointer;
+}
 
 /* =========================================================
    HEADER
@@ -513,7 +435,7 @@
             calc(100% - 30px)
         );
 
-        max-height: calc(100vh - 40px);
+        max-height: calc(100dvh - 40px);
 
         border-radius: 14px;
 
@@ -612,7 +534,7 @@
 
         width: calc(100% - 24px);
 
-        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
 
         border-radius: 12px;
 

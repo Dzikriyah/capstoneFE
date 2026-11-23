@@ -1,4 +1,4 @@
-@extends('layouts.prototype')
+@extends('layouts.customer')
 
 @section('head')
 <title>Profile Saya - IB Gaming</title>

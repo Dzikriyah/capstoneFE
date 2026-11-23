@@ -448,17 +448,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             orderItem.innerHTML = `
 
-                <img
-                    src="${order.image}"
-                    alt="${order.name}"
-                    class="order-item-image"
-                >
+                <img class="order-item-image" alt="">
 
                 <div class="order-item-info">
 
-                    <h3>
-                        ${order.name}
-                    </h3>
+                    <h3></h3>
 
                     <p>
                         ${formatPrice(order.price)}
@@ -492,6 +486,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             `;
 
+
+            const itemImage = orderItem.querySelector(".order-item-image");
+            if (order.image) {
+                itemImage.src = order.image;
+            }
+            itemImage.alt = order.name;
+            orderItem.querySelector("h3").textContent = order.name;
 
             orderItemsContainer.appendChild(
                 orderItem
@@ -689,7 +690,42 @@ document.addEventListener("DOMContentLoaded", function () {
        JALANKAN
     ========================================================= */
 
-    initializeOrders();
+    function restoreOrders() {
+        const savedOrders = localStorage.getItem(CART_STORAGE_KEY);
+
+        if (savedOrders === null) {
+            return false;
+        }
+
+        try {
+            const cart = JSON.parse(savedOrders);
+
+            if (!Array.isArray(cart)) {
+                return false;
+            }
+
+            orders = cart
+                .filter((item) => item && typeof item.name === "string" &&
+                    Number.isFinite(Number(item.price)) && Number(item.quantity) > 0)
+                .map((item) => ({
+                    name: item.name,
+                    price: Number(item.price),
+                    quantity: Math.floor(Number(item.quantity)),
+                    image: typeof item.image === "string" ? item.image : "",
+                    note: typeof item.note === "string" ? item.note : ""
+                }))
+                .filter((item) => Number.isSafeInteger(item.quantity) && item.quantity > 0);
+
+            renderOrders();
+            return true;
+        } catch {
+            return false;
+        }
+    }
+
+    if (!restoreOrders()) {
+        initializeOrders();
+    }
 
 const continueOrderButton =
     document.querySelector(".continue-order-button");

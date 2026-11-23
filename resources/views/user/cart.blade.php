@@ -1,6 +1,6 @@
-@extends('layouts.prototype')
+@extends('layouts.customer')
 
-@section('body-attributes', 'class="dashboard-pelanggan"')
+@section('body-attributes')class="dashboard-pelanggan"@endsection
 @section('head')
 <title>Dashboard Pelanggan - Keranjang</title>
 

@@ -1,4 +1,4 @@
-@extends('layouts.prototype')
+@extends('layouts.customer')
 
 @section('head')
 <title>Pesanan Berhasil - IB Gaming</title>

@@ -30,6 +30,7 @@
     <!-- =================================================
          UNIT GRID
     ================================================== -->
+    <p class="unit-edit-feedback" id="unitEditFeedback" role="status" hidden></p>
     <x-admin.kelola-unit.unit-grid />
 
 </main>

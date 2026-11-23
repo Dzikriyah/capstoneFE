@@ -44,5 +44,4 @@ Route::view('/user/fnb/pembayaran-qris', 'user.fnb.pembayaran-qris')->name('user
 Route::view('/user/fnb/pesan-fnb', 'user.fnb.pesan-fnb')->name('user.fnb.pesan-fnb');
 Route::view('/user/fnb/pesanan-berhasil', 'user.fnb.pesanan-berhasil')->name('user.fnb.pesanan-berhasil');
 Route::view('/user/home', 'user.home')->name('user.home');
-Route::view('/user/notification', 'user.notification')->name('user.notification');
 Route::view('/user/profile', 'user.profile')->name('user.profile');

@@ -1,67 +1,7 @@
-@extends('layouts.prototype')
-
-@section('body-attributes', 'class="notification-page"')
-@section('head')
-<title>Notifikasi - IB Gaming</title>
-
-<!-- ============================================
-     GLOBAL CSS
-============================================= -->
-
-<link
-    rel="stylesheet"
-    href="{{ asset('css/global.css') }}"
->
-
-<!-- ============================================
-     NOTIFICATION CSS
-============================================= -->
-
-<link
-    rel="stylesheet"
-    href="{{ asset('css/user/notification.css') }}"
->
-@endsection
-
-@section('content')
-<!-- ============================================
-         BACKGROUND PAGE
-         Background akan ditentukan berdasarkan
-         parameter ?from=index atau ?from=home
-    ============================================= -->
-
-    <main
-    id="notificationBackground"
-    class="notification-background"
->
-    <iframe
-        id="backgroundFrame"
-        class="background-frame"
-        title="Halaman utama IB Gaming"
-    ></iframe>
-</main>
-
-
-
-    <!-- ============================================
-         DARK OVERLAY
-    ============================================= -->
-
-    <div
-        class="notification-overlay"
-        id="notificationOverlay"
-    ></div>
-
-
-
-    <!-- ============================================
-         NOTIFICATION MODAL
-    ============================================= -->
-
-    <section
+    <dialog
         class="notification-modal"
-        id="notificationModal"
-        aria-label="Notifikasi"
+        id="userNotificationDialog"
+        aria-labelledby="userNotificationTitle"
     >
 
 
@@ -359,21 +299,8 @@
                 class="notification-back"
                 id="notificationBack"
             >
-                Kembali
+                Tutup
             </button>
 
         </div>
-
-
-    </section>
-
-
-
-    <!-- ============================================
-         JAVASCRIPT
-    ============================================= -->
-
-    <script
-        src="{{ asset('js/user/notification.js') }}"
-    ></script>
-@endsection
+    </dialog>

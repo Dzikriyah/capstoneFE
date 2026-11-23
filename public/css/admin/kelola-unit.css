@@ -606,3 +606,13 @@
         flex-wrap: wrap;
     }
 }
+
+.unit-edit-feedback:not([hidden]) {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    border: 1px solid #c7e4ce;
+    border-radius: 8px;
+    background: #edf8ef;
+    color: #265e34;
+    font-size: 13px;
+}

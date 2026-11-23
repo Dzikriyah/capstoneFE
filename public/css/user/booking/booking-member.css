@@ -409,11 +409,9 @@
 
     min-height: 125px;
 
-    padding: 15px 16px;
-
+    padding: 16px;
     border: 1px dashed #ddc7a6;
-    border-radius: 9px;
-
+    border-radius: 12px;
     background: #fffdfa;
 
     box-sizing: border-box;
@@ -491,7 +489,8 @@
 
 .file-button {
     width: 100%;
-    height: 30px;
+    min-height: 36px;
+    gap: 8px;
 
     display: flex;
     align-items: center;
@@ -502,13 +501,13 @@
     border: 1px solid #d3b37e;
     border-radius: 6px;
 
-    background: #fffefa;
+    background: #f7efe2;
 
-    color: #b58a4a;
+    color: #775323;
 
     font-family: var(--font-body);
-    font-size: 9px;
-    font-weight: 500;
+    font-size: 11px;
+    font-weight: 600;
 
     cursor: pointer;
 
@@ -528,17 +527,77 @@
 }
 
 
+.file-button img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.document-file-hint {
+    margin: 7px 0 0;
+    color: #62584e;
+    font-size: 10px;
+    text-align: center;
+}
+
+.document-preview[hidden],
+.selected-file:empty {
+    display: none;
+}
+
+.document-file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+}
+
+.document-file-input:focus-visible + .file-button {
+    outline: 2px solid #b58a4a;
+    outline-offset: 3px;
+}
+
+.document-preview:not([hidden]) {
+    display: block;
+    width: 100%;
+    max-height: 240px;
+    margin-top: 10px;
+    border: 1px solid #ddc7a6;
+    border-radius: 8px;
+    padding: 6px;
+    object-fit: contain;
+    background: #f7f1e8;
+}
+
+.document-remove-button:not([hidden]) {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 5px 10px;
+    border: 1px solid #e3b7af;
+    border-radius: 6px;
+    background: #fffdfa;
+    color: #8d3028;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.document-remove-button:hover {
+    background: #fceeea;
+}
+
 .selected-file {
     display: block;
 
-    margin-top: 5px;
+    margin-top: 8px;
 
     overflow: hidden;
 
     color: #857d74;
 
     font-family: var(--font-body);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
 
     line-height: 1.2;
